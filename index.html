@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text-to-Speech</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body class="font-['Poppins'] bg-gradient-to-r from-[#1e1e1e] to-[#2c2c2c] text-white">
+  <header class="navbar bg-base-100 shadow-md">
+    <div class="navbar-start">
+      <a href="index.html" class="btn btn-ghost normal-case text-xl">Text-to-Speech</a>
+    </div>
+    <div class="navbar-end">
+      <a href="index.html" class="btn btn-ghost">Home</a>
+      <a href="customize.html" class="btn btn-ghost">Customize</a>
+      <a href="about.html" class="btn btn-ghost">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero min-h-screen">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">Text-to-Speech</h1>
+          <p class="mb-5">Simply type in the text you want to hear and we'll convert it to speech.</p>
+          <div class="form-control">
+            <textarea class="textarea textarea-bordered h-24 w-full max-w-xs" placeholder="Enter your text"></textarea>
+            <div class="mt-4 flex gap-4">
+              <button class="btn btn-primary">Convert to Speech</button>
+              <button class="btn btn-secondary">Download Speech</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-[#2c2c2c]">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Customize your Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Voice Settings</h3>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Voice</span>
+              </label>
+              <select class="select select-bordered">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Robot</option>
+                <option>Cartoon</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Language</span>
+              </label>
+              <select class="select select-bordered">
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Italian</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pitch</span>
+              </label>
+              <input type="range" min="0" max="2" step="0.1" class="range range-primary" />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Speed</span>
+              </label>
+              <input type="range" min="0.5" max="2" step="0.1" class="range range-primary" />
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Audio Settings</h3>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Volume</span>
+              </label>
+              <input type="range" min="0" max="1" step="0.1" class="range range-primary" />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Playback Rate</span>
+              </label>
+              <input type="range" min="0.5" max="2" step="0.1" class="range range-primary" />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Audio Format</span>
+              </label>
+              <select class="select select-bordered">
+                <option>MP3</option>
+                <option>WAV</option>
+                <option>OGG</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Download Voice</span>
+              </label>
+              <button class="btn btn-secondary">Download Voice</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8">About Text-to-Speech</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">What is Text-to-Speech?</h3>
+            <p>Text-to-speech (TTS) is a technology that converts written text into synthesized speech. It allows users to hear the content of text files and web pages read aloud, which can be particularly helpful for individuals with visual impairments, reading difficulties, or those who prefer to listen to information rather than read it.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">How it Works</h3>
+            <p>Our text-to-speech engine analyzes the input text and generates an audio file that mimics a human voice. This is done through a process called speech synthesis, where the system breaks down the text into individual sounds and then combines them to create the final audio output. Users can customize the voice, language, pitch, and speed to suit their preferences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer p-10 bg-base-200 text-base-content">
+    <div>
+      <span class="footer-title">About</span>
+      <a href="#" class="link link-hover">About us</a>
+      <a href="#" class="link link-hover">Contact</a>
+      <a href="#" class="link link-hover">Jobs</a>
+    </div>
+    <div>
+      <span class="footer-title">Legal</span>
+      <a href="#" class="link link-hover">Terms of use</a>
+      <a href="#" class="link link-hover">Privacy policy</a>
+      <a href="#" class="link link-hover">Cookie policy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Swiper
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    // Initialize ScrollReveal
+    ScrollReveal().reveal('.hero', { delay: 250 });
+    ScrollReveal().reveal('section', { delay: 500, distance: '50px', origin: 'bottom', interval: 200 });
+
+    // Initialize GSAP
+    gsap.from('.navbar', { duration: 1, y: '-100%', ease: 'power2.out' });
+    gsap.from('.footer', { duration: 1, y: '100%', ease: 'power2.out' });
+  </script>
+</body>
+</html>

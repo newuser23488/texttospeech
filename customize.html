@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Text-to-Speech</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body class="font-['Poppins'] bg-gradient-to-r from-[#1e1e1e] to-[#2c2c2c] text-white">
+  <header class="navbar bg-base-100 shadow-md">
+    <div class="navbar-start">
+      <a href="index.html" class="btn btn-ghost normal-case text-xl">Text-to-Speech</a>
+    </div>
+    <div class="navbar-end">
+      <a href="index.html" class="btn btn-ghost">Home</a>
+      <a href="customize.html" class="btn btn-ghost">Customize</a>
+      <a href="about.html" class="btn btn-ghost">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero min-h-screen">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">Customize Text-to-Speech</h1>
+          <p class="mb-5">Tailor the voice, language, pitch, and speed to your preference.</p>
+          <div class="form-control">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="label">
+                  <span class="label-text">Voice</span>
+                </label>
+                <select class="select select-bordered w-full">
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Robot</option>
+                  <option>Cartoon</option>
+                </select>
+              </div>
+              <div>
+                <label class="label">
+                  <span class="label-text">Language</span>
+                </label>
+                <select class="select select-bordered w-full">
+                  <option>English</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                  <option>German</option>
+                  <option>Italian</option>
+                </select>
+              </div>
+              <div>
+                <label class="label">
+                  <span class="label-text">Pitch</span>
+                </label>
+                <input type="range" min="0" max="2" step="0.1" class="range range-primary w-full" />
+              </div>
+              <div>
+                <label class="label">
+                  <span class="label-text">Speed</span>
+                </label>
+                <input type="range" min="0.5" max="2" step="0.1" class="range range-primary w-full" />
+              </div>
+            </div>
+            <div class="mt-4 flex gap-4">
+              <button class="btn btn-primary">Apply Changes</button>
+              <button class="btn btn-secondary">Download Voice</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-[#2c2c2c]">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Audio Settings</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Volume</h3>
+            <input type="range" min="0" max="1" step="0.1" class="range range-primary w-full" />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Playback Rate</h3>
+            <input type="range" min="0.5" max="2" step="0.1" class="range range-primary w-full" />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Audio Format</h3>
+            <select class="select select-bordered w-full">
+              <option>MP3</option>
+              <option>WAV</option>
+              <option>OGG</option>
+            </select>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Download Generated Audio</h3>
+            <button class="btn btn-secondary">Download Audio</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer p-10 bg-base-200 text-base-content">
+    <div>
+      <span class="footer-title">About</span>
+      <a href="#" class="link link-hover">About us</a>
+      <a href="#" class="link link-hover">Contact</a>
+      <a href="#" class="link link-hover">Jobs</a>
+    </div>
+    <div>
+      <span class="footer-title">Legal</span>
+      <a href="#" class="link link-hover">Terms of use</a>
+      <a href="#" class="link link-hover
